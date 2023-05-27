@@ -12,7 +12,9 @@ function calculate(button) {
         calculation = []
         screenDisplay.textContent = '.'
     } else if (value === '=') {
-        screenDisplay.textContent = eval(accumulativeCalculation)
+        let cal=eval(accumulativeCalculation)
+        screenDisplay.textContent = cal
+        calculation=[cal]
     } else {
         calculation.push(value)
         accumulativeCalculation = calculation.join('')
